@@ -245,6 +245,13 @@ public class JavascriptOptions extends OptionsBag {
             return this;
         }
 
+        public Builder fromMap(Map<String, Object> m) {
+            map.clear();
+            map.putAll(m);
+
+            return this;
+        }
+
         public JavascriptOptions build() {
             return new JavascriptOptions(map);
         }

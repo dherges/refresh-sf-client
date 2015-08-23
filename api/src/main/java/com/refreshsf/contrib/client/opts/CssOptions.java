@@ -138,6 +138,13 @@ public class CssOptions extends OptionsBag {
             return this;
         }
 
+        public Builder fromMap(Map<String, Object> m) {
+            map.clear();
+            map.putAll(m);
+
+            return this;
+        }
+
         public CssOptions build() {
             return new CssOptions(map);
         }
