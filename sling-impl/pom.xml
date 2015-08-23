@@ -22,15 +22,13 @@
         <groupId>com.refresh-sf.contrib</groupId>
         <artifactId>refresh-sf-client</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>refresh-sf-client-sling-impl</artifactId>
-    <packaging>bundle</packaging>
-    <version>1.0-SNAPSHOT</version>
-
     <name>refresh-sf-client-sling-impl</name>
+    <version>1.0-SNAPSHOT</version>
     <description>Sling implementation for refresh-sf-client-api</description>
+    <packaging>bundle</packaging>
 
     <!-- DEPENDENCIES -->
     <dependencies>
@@ -38,8 +36,9 @@
             <groupId>com.refresh-sf.contrib</groupId>
             <artifactId>refresh-sf-client-api</artifactId>
             <version>${project.version}</version>
+            <scope>compile</scope>
         </dependency>
-        <!--dependency>
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
@@ -82,11 +81,11 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency-->
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.commons.osgi</artifactId>
+            <version>2.3.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 
