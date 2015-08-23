@@ -18,8 +18,8 @@
 
 package com.refreshsf.contrib.client.tests;
 
-import com.refreshsf.contrib.client.Javascript;
-import com.refreshsf.contrib.client.JavascriptOptions;
+import com.refreshsf.contrib.client.api.Javascript;
+import com.refreshsf.contrib.client.opts.JavascriptOptions;
 import com.refreshsf.contrib.client.Result;
 import org.junit.Before;
 import org.junit.Test;
@@ -55,7 +55,7 @@ public class JavascriptTest {
                 .sequences(true)
                 .build();
 
-        Result result = javascript.compress(testCode, "javascript", opts);
+        Result result = javascript.uglify(testCode, opts);
 
         assertThat(result).isNotNull();
         assertThat(result.getCode()).isNotEmpty();

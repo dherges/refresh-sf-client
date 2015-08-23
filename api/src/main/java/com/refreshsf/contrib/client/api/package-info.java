@@ -16,10 +16,4 @@
  * limitations under the License.
  */
 
-package com.refreshsf.contrib.client;
-
-/**
- * API interface for '/css/'
- */
-public interface Css {
-}
+package com.refreshsf.contrib.client.api;

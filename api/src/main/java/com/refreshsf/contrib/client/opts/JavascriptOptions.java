@@ -16,242 +16,236 @@
  * limitations under the License.
  */
 
-package com.refreshsf.contrib.client;
-
-import com.refreshsf.contrib.client.util.MapDecorator;
+package com.refreshsf.contrib.client.opts;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class JavascriptOptions extends MapDecorator<String, Object> {
+public class JavascriptOptions extends OptionsBag {
 
     private JavascriptOptions(Map<String, Object> backingMap) {
-        super(backingMap);
+        super("options", backingMap);
     }
 
     public boolean sequences() {
-        return Boolean.valueOf(get("options[sequences]").toString());
+        return get("sequences", false);
     }
 
     public boolean properties() {
-        return Boolean.valueOf(get("options[properties]").toString());
+        return get("properties", false);
     }
 
     public boolean deadCode() {
-        return Boolean.valueOf(get("options[dead_code]").toString());
+        return get("dead_code", false);
     }
 
     public boolean dropDebugger() {
-        return Boolean.valueOf(get("options[drop_debugger]").toString());
+        return get("drop_debugger", false);
     }
 
     public boolean conditionals() {
-        return Boolean.valueOf(get("options[conditionals]").toString());
+        return get("conditionals", false);
     }
 
     public boolean comparisons() {
-        return Boolean.valueOf(get("options[comparisons]").toString());
+        return get("comparisons", false);
     }
 
     public boolean evaluate() {
-        return Boolean.valueOf(get("options[evaluate]").toString());
+        return get("evaluate", false);
     }
 
     public boolean booleans() {
-        return Boolean.valueOf(get("options[booleans]").toString());
+        return get("booleans", false);
     }
 
     public boolean loops() {
-        return Boolean.valueOf(get("options[loops]").toString());
+        return get("loops", false);
     }
 
     public boolean unused() {
-        return Boolean.valueOf(get("options[unused]").toString());
+        return get("unused", false);
     }
 
     public boolean hoistFuns() {
-        return Boolean.valueOf(get("options[hoist_funs]").toString());
+        return get("hoist_funs", false);
     }
 
     public boolean ifReturn() {
-        return Boolean.valueOf(get("options[if_return]").toString());
+        return get("if_return", false);
     }
 
     public boolean joinVars() {
-        return Boolean.valueOf(get("options[join_vars]").toString());
+        return get("join_vars", false);
     }
 
     public boolean cascade() {
-        return Boolean.valueOf(get("options[cascade]").toString());
+        return get("cascade", false);
     }
 
     public boolean warnings() {
-        return Boolean.valueOf(get("options[warnings]").toString());
+        return get("warnings", false);
     }
 
     public boolean negateIIFE() {
-        return Boolean.valueOf(get("options[negate_iife]").toString());
+        return get("negate_iife", false);
     }
 
     public boolean unsafe() {
-        return Boolean.valueOf(get("options[unsafe]").toString());
+        return get("unsafe", false);
     }
 
     public boolean hoistVars() {
-        return Boolean.valueOf(get("options[hoist_vars]").toString());
+        return get("hoist_vars", false);
     }
 
     public boolean pureGetters() {
-        return Boolean.valueOf(get("options[pure_getters]").toString());
+        return get("pure_getters", false);
     }
 
     public boolean dropConsole() {
-        return Boolean.valueOf(get("options[drop_console]").toString());
+        return get("drop_console", false);
     }
 
     public boolean keepFargs() {
-        return Boolean.valueOf(get("options[keep_fargs]").toString());
+        return get("keep_fargs", false);
     }
 
     public static class Builder {
 
-        private Map<String, Object> map = new HashMap<String, Object>();
+        private Map<String, Object> map;
 
         public Builder() {
-            map.put("options[]", null);
+            this.map = new HashMap<String, Object>();
         }
 
         public Builder sequences(boolean val) {
-            map.put("options[sequences]", val);
+            map.put("sequences", val);
 
             return this;
         }
 
         public Builder properties(boolean val) {
-            map.put("options[properties]", val);
+            map.put("properties", val);
 
             return this;
         }
 
         public Builder deadCode(boolean val) {
-            map.put("options[dead_code]", val);
+            map.put("dead_code", val);
 
             return this;
         }
 
         public Builder dropDebugger(boolean val) {
-            map.put("options[drop_debugger]", val);
+            map.put("drop_debugger", val);
 
             return this;
         }
 
         public Builder conditionals(boolean val) {
-            map.put("options[conditionals]", val);
+            map.put("conditionals", val);
 
             return this;
         }
 
         public Builder comparisons(boolean val) {
-            map.put("options[comparisons]", val);
+            map.put("comparisons", val);
 
             return this;
         }
 
         public Builder evaluate(boolean val) {
-            map.put("options[evaluate]", val);
+            map.put("evaluate", val);
 
             return this;
         }
 
         public Builder booleans(boolean val) {
-            map.put("options[booleans]", val);
+            map.put("booleans", val);
 
             return this;
         }
 
         public Builder loops(boolean val) {
-            map.put("options[loops]", val);
+            map.put("loops", val);
 
             return this;
         }
 
         public Builder unused(boolean val) {
-            map.put("options[unused]", val);
+            map.put("unused", val);
 
             return this;
         }
 
         public Builder hoistFuns(boolean val) {
-            map.put("options[hoist_funs]", val);
+            map.put("hoist_funs", val);
 
             return this;
         }
 
         public Builder ifReturn(boolean val) {
-            map.put("options[if_return]", val);
+            map.put("if_return", val);
 
             return this;
         }
 
         public Builder joinVars(boolean val) {
-            map.put("options[join_vars]", val);
+            map.put("join_vars", val);
 
             return this;
         }
 
         public Builder cascade(boolean val) {
-            map.put("options[cascade]", val);
+            map.put("cascade", val);
 
             return this;
         }
 
         public Builder warnings(boolean val) {
-            map.put("options[warnings]", val);
+            map.put("warnings", val);
 
             return this;
         }
 
         public Builder negateIIFE(boolean val) {
-            map.put("options[negate_iife]", val);
+            map.put("negate_iife", val);
 
             return this;
         }
 
         public Builder unsafe(boolean val) {
-            map.put("options[unsafe]", val);
+            map.put("unsafe", val);
 
             return this;
         }
 
         public Builder hoistVars(boolean val) {
-            map.put("options[hoist_vars]", val);
+            map.put("hoist_vars", val);
 
             return this;
         }
 
         public Builder pureGetters(boolean val) {
-            map.put("options[pure_getters]", val);
+            map.put("pure_getters", val);
 
             return this;
         }
 
         public Builder dropConsole(boolean val) {
-            map.put("options[drop_console]", val);
+            map.put("drop_console", val);
 
             return this;
         }
 
         public Builder keepFargs(boolean val) {
-            map.put("options[keep_fargs]", val);
+            map.put("keep_fargs", val);
 
             return this;
         }
 
         public JavascriptOptions build() {
-            if (map.size() > 1) {
-                map.remove("options[]");
-            }
-
             return new JavascriptOptions(map);
         }
     }

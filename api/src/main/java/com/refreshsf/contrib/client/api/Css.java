@@ -16,26 +16,34 @@
  * limitations under the License.
  */
 
-package com.refreshsf.contrib.client;
+package com.refreshsf.contrib.client.api;
 
+import com.refreshsf.contrib.client.Result;
+import com.refreshsf.contrib.client.opts.CssOptions;
 import retrofit.Callback;
-import retrofit.http.*;
+import retrofit.http.Field;
+import retrofit.http.FieldMap;
+import retrofit.http.FormUrlEncoded;
+import retrofit.http.Headers;
+import retrofit.http.POST;
 
 /**
- * API interface for '/javascript/'
+ * API interface for '/css/'
+ *
+ * @link http://refresh-sf.com/#cleancss
+ * @link https://github.com/jakubpawlowicz/clean-css
  */
-public interface Javascript {
+public interface Css {
 
     @Headers({
             "Accept: application/json, text/javascript, */*; q=0.01",
             "User-Agent: Refresh-SF-Java-Client"
     })
-    @POST("/javascript/")
+    @POST("/css/")
     @FormUrlEncoded
-    public Result compress(
+    public Result clean(
             @Field("code") String code,
-            @Field("type") String type,
-            @FieldMap JavascriptOptions options
+            @FieldMap CssOptions options
     );
 
 
@@ -44,14 +52,12 @@ public interface Javascript {
             "Accept: application/json, text/javascript, */*; q=0.01",
             "User-Agent: Refresh-SF-Java-Client"
     })
-    @POST("/javascript/")
+    @POST("/css/")
     @FormUrlEncoded
-    public void compressAsync(
+    public void cleanAsync(
             @Field("code") String code,
-            @Field("type") String type,
-            @Field("options") JavascriptOptions options,
+            @FieldMap CssOptions options,
             Callback<Result> callback
     );
-
 
 }

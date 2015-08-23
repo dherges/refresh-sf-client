@@ -16,10 +16,4 @@
  * limitations under the License.
  */
 
-package com.refreshsf.contrib.client;
-
-/**
- * API interface for '/html/'
- */
-public interface Html {
-}
+package com.refreshsf.contrib.client.opts;
