@@ -80,6 +80,11 @@ public class RefreshSfOptionSetImpl implements RefreshSfOptionSet {
     }
 
     @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
     public Type getType() {
         return null;
     }

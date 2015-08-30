@@ -31,6 +31,8 @@ public interface RefreshSfOptionSet {
 
     public static enum Type { CSS, JS, HTML }
 
+    public String getName();
+
     /** 'css', 'js', 'html' */
     public Type getType();
 
