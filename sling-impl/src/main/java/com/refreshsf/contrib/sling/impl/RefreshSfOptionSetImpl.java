@@ -18,9 +18,9 @@
 
 package com.refreshsf.contrib.sling.impl;
 
-import com.refreshsf.contrib.client.opts.CssOptions;
-import com.refreshsf.contrib.client.opts.HtmlOptions;
-import com.refreshsf.contrib.client.opts.JavascriptOptions;
+import com.refreshsf.contrib.client.types.opts.CssOptions;
+import com.refreshsf.contrib.client.types.opts.HtmlOptions;
+import com.refreshsf.contrib.client.types.opts.JavascriptOptions;
 import com.refreshsf.contrib.sling.RefreshSfOptionSet;
 import org.apache.felix.scr.annotations.*;
 import org.apache.sling.commons.osgi.PropertiesUtil;

@@ -16,29 +16,4 @@
  * limitations under the License.
  */
 
-package com.refreshsf.contrib.client;
-
-import java.util.Map;
-
-public class ErrorResult {
-
-    protected String msg;
-    protected Map<String, Object> defs;
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public Map<String, Object> getDefs() {
-        return defs;
-    }
-
-    public void setDefs(Map<String, Object> defs) {
-        this.defs = defs;
-    }
-
-}
+package com.refreshsf.contrib.client.types.opts;

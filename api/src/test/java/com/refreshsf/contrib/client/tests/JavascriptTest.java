@@ -19,8 +19,8 @@
 package com.refreshsf.contrib.client.tests;
 
 import com.refreshsf.contrib.client.api.Javascript;
-import com.refreshsf.contrib.client.opts.JavascriptOptions;
-import com.refreshsf.contrib.client.Result;
+import com.refreshsf.contrib.client.types.opts.JavascriptOptions;
+import com.refreshsf.contrib.client.types.Result;
 import org.junit.Before;
 import org.junit.Test;
 import retrofit.RestAdapter;

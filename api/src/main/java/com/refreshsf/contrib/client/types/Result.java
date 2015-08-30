@@ -16,4 +16,26 @@
  * limitations under the License.
  */
 
-package com.refreshsf.contrib.client.opts;
+package com.refreshsf.contrib.client.types;
+
+public class Result {
+
+    protected String code;
+    protected String map;
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getMap() {
+        return map;
+    }
+
+    public void setMap(String map) {
+        this.map = map;
+    }
+}

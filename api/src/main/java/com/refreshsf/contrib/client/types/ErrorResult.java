@@ -16,32 +16,29 @@
  * limitations under the License.
  */
 
-package com.refreshsf.contrib.sling;
-
-import com.refreshsf.contrib.client.types.opts.CssOptions;
-import com.refreshsf.contrib.client.types.opts.HtmlOptions;
-import com.refreshsf.contrib.client.types.opts.JavascriptOptions;
+package com.refreshsf.contrib.client.types;
 
 import java.util.Map;
 
-/**
- * Reflects a client for an HTTP API endpoint of a gpbmike/refresh-sf service
- */
-public interface RefreshSfOptionSet {
+public class ErrorResult {
 
-    public static enum Type { CSS, JS, HTML }
+    protected String msg;
+    protected Map<String, Object> defs;
 
-    public String getName();
+    public String getMsg() {
+        return msg;
+    }
 
-    /** 'css', 'js', 'html' */
-    public Type getType();
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
 
-    public Map<String, Object> getMap();
+    public Map<String, Object> getDefs() {
+        return defs;
+    }
 
-    public CssOptions asCssOptions();
-
-    public HtmlOptions asHtmlOptions();
-
-    public JavascriptOptions asJavascriptOptions();
+    public void setDefs(Map<String, Object> defs) {
+        this.defs = defs;
+    }
 
 }

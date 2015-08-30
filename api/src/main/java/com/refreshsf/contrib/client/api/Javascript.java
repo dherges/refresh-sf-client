@@ -18,8 +18,8 @@
 
 package com.refreshsf.contrib.client.api;
 
-import com.refreshsf.contrib.client.opts.JavascriptOptions;
-import com.refreshsf.contrib.client.Result;
+import com.refreshsf.contrib.client.types.opts.JavascriptOptions;
+import com.refreshsf.contrib.client.types.Result;
 import retrofit.Callback;
 import retrofit.http.Field;
 import retrofit.http.FieldMap;

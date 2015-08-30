@@ -18,8 +18,8 @@
 
 package com.refreshsf.contrib.sling.example;
 
-import com.refreshsf.contrib.client.ErrorResult;
-import com.refreshsf.contrib.client.Result;
+import com.refreshsf.contrib.client.types.ErrorResult;
+import com.refreshsf.contrib.client.types.Result;
 import com.refreshsf.contrib.client.api.Javascript;
 import com.refreshsf.contrib.sling.RefreshSfClient;
 import com.refreshsf.contrib.sling.RefreshSfOptionSet;

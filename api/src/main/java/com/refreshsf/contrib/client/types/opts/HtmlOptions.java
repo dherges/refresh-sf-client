@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package com.refreshsf.contrib.client.opts;
+package com.refreshsf.contrib.client.types.opts;
 
 import org.apache.commons.lang3.StringUtils;
 
