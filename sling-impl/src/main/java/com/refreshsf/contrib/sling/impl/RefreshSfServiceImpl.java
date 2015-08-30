@@ -18,12 +18,6 @@
 
 package com.refreshsf.contrib.sling.impl;
 
-import com.refreshsf.contrib.client.api.Css;
-import com.refreshsf.contrib.client.api.Html;
-import com.refreshsf.contrib.client.api.Javascript;
-import com.refreshsf.contrib.client.opts.CssOptions;
-import com.refreshsf.contrib.client.opts.HtmlOptions;
-import com.refreshsf.contrib.client.opts.JavascriptOptions;
 import com.refreshsf.contrib.sling.RefreshSfClient;
 import com.refreshsf.contrib.sling.RefreshSfOptionSet;
 import com.refreshsf.contrib.sling.RefreshSfService;
@@ -104,31 +98,6 @@ public class RefreshSfServiceImpl implements RefreshSfService {
     @Override
     public RefreshSfOptionSet getConfiguredOptionSet(String optionSetName) {
         return optionSets.get(optionSetName);
-    }
-
-
-    @Override
-    public String cleanCss(String clientName, String optionSetName, String input) {
-        Css cssApi = clients.get(clientName).getCssApi();
-        CssOptions options = optionSets.get(optionSetName).asCssOptions();
-
-        return cssApi.clean(input, options).getCode();
-    }
-
-    @Override
-    public String uglifyJs(String clientName, String optionSetName, String input) {
-        Javascript jsApi = clients.get(clientName).getJavascriptApi();
-        JavascriptOptions options = optionSets.get(optionSetName).asJavascriptOptions();
-
-        return jsApi.uglify(input, options).getCode();
-    }
-
-    @Override
-    public String minifyHtml(String clientName, String optionSetName, String input) {
-        Html htmlApi = clients.get(clientName).getHtmlApi();
-        HtmlOptions options = optionSets.get(optionSetName).asHtmlOptions();
-
-        return htmlApi.minify(input, options).getCode();
     }
 
 }

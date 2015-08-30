@@ -83,9 +83,16 @@
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.commons.osgi</artifactId>
-            <version>2.3.0</version>
+            <version>2.2.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
 
@@ -95,16 +102,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>${org.apache.maven.plugins.compiler.version}</version>
                 <configuration>
-                    <source>6</source>
-                    <target>6</target>
+                    <source>${org.apache.maven.plugins.compiler.source}</source>
+                    <target>${org.apache.maven.plugins.compiler.target}</target>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-scr-plugin</artifactId>
-                <version>1.16.0</version>
+                <version>${org.apache.felix.maven-scr-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>generate-scr-descriptor</id>
@@ -118,7 +125,7 @@
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
                 <extensions>true</extensions>
-                <version>2.4.0</version>
+                <version>${org.apache.felix.maven-bundle-plugin.version}</version>
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>com.refreshsf.contrib.client</Bundle-SymbolicName>
@@ -139,7 +146,7 @@
             <plugin>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>maven-sling-plugin</artifactId>
-                <version>2.1.0</version>
+                <version>${org.apache.sling.maven-sling-plugin.version}</version>
                 <configuration>
                     <slingUrl>http://localhost:4502/apps/sling-contrib/install</slingUrl>
                     <usePut>true</usePut>

@@ -40,16 +40,4 @@ public interface RefreshSfService {
      */
     public RefreshSfOptionSet getConfiguredOptionSet(String optionSetName);
 
-
-
-
-    /** @deprecated is this really a good idea? */
-    public String cleanCss(String clientName, String optionSetName, String input);
-
-    /** @deprecated is this really a good idea? */
-    public String uglifyJs(String clientName, String optionSetName, String input);
-
-    /** @deprecated is this really a good idea? */
-    public String minifyHtml(String clientName, String optionSetName, String input);
-
 }
