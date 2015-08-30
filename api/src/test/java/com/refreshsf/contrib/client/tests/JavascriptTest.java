@@ -37,7 +37,7 @@ public class JavascriptTest {
     public void setUp() {
         RestAdapter restAdapter = new RestAdapter.Builder()
                 .setLogLevel(RestAdapter.LogLevel.FULL)
-                .setEndpoint("https://refresh-sf.herokuapp.com")
+                .setEndpoint("http://refresh-sf.herokuapp.com")
                 .build();
 
         javascript = restAdapter.create(Javascript.class);
