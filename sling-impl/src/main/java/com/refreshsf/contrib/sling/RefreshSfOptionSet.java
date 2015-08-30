@@ -38,10 +38,10 @@ public interface RefreshSfOptionSet {
 
     public Map<String, Object> getMap();
 
-    public CssOptions getCssOptions();
+    public CssOptions asCssOptions();
 
-    public HtmlOptions getHtmlOptions();
+    public HtmlOptions asHtmlOptions();
 
-    public JavascriptOptions getJavascriptOptions();
+    public JavascriptOptions asJavascriptOptions();
 
 }

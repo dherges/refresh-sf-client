@@ -95,21 +95,21 @@ public class RefreshSfOptionSetImpl implements RefreshSfOptionSet {
     }
 
     @Override
-    public CssOptions getCssOptions() {
+    public CssOptions asCssOptions() {
         return new CssOptions.Builder()
                 .fromMap(getMap())
                 .build();
     }
 
     @Override
-    public HtmlOptions getHtmlOptions() {
+    public HtmlOptions asHtmlOptions() {
         return new HtmlOptions.Builder()
                 .fromMap(getMap())
                 .build();
     }
 
     @Override
-    public JavascriptOptions getJavascriptOptions() {
+    public JavascriptOptions asJavascriptOptions() {
         return new JavascriptOptions.Builder()
                 .fromMap(getMap())
                 .build();

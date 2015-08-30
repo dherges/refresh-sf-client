@@ -110,7 +110,7 @@ public class RefreshSfServiceImpl implements RefreshSfService {
     @Override
     public String cleanCss(String clientName, String optionSetName, String input) {
         Css cssApi = clients.get(clientName).getCssApi();
-        CssOptions options = optionSets.get(optionSetName).getCssOptions();
+        CssOptions options = optionSets.get(optionSetName).asCssOptions();
 
         return cssApi.clean(input, options).getCode();
     }
@@ -118,7 +118,7 @@ public class RefreshSfServiceImpl implements RefreshSfService {
     @Override
     public String uglifyJs(String clientName, String optionSetName, String input) {
         Javascript jsApi = clients.get(clientName).getJavascriptApi();
-        JavascriptOptions options = optionSets.get(optionSetName).getJavascriptOptions();
+        JavascriptOptions options = optionSets.get(optionSetName).asJavascriptOptions();
 
         return jsApi.uglify(input, options).getCode();
     }
@@ -126,7 +126,7 @@ public class RefreshSfServiceImpl implements RefreshSfService {
     @Override
     public String minifyHtml(String clientName, String optionSetName, String input) {
         Html htmlApi = clients.get(clientName).getHtmlApi();
-        HtmlOptions options = optionSets.get(optionSetName).getHtmlOptions();
+        HtmlOptions options = optionSets.get(optionSetName).asHtmlOptions();
 
         return htmlApi.minify(input, options).getCode();
     }
