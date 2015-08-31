@@ -4,11 +4,7 @@ import com.refreshsf.contrib.client.api.Css;
 import com.refreshsf.contrib.client.api.Html;
 import com.refreshsf.contrib.client.api.Javascript;
 import com.refreshsf.contrib.sling.RefreshSfClient;
-import org.apache.felix.scr.annotations.Activate;
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Properties;
-import org.apache.felix.scr.annotations.Property;
-import org.apache.felix.scr.annotations.Service;
+import org.apache.felix.scr.annotations.*;
 import org.apache.sling.commons.osgi.PropertiesUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,10 +41,15 @@ public class RefreshSfClientImpl implements RefreshSfClient {
 
     @Activate
     protected final void activate(final Map<String, String> properties) throws Exception {
+        modified(properties);
+    }
+
+    @Modified
+    protected final void modified(final Map<String, String> properties) throws Exception {
         name = PropertiesUtil.toString(properties.get(PROP_NAME), "");
         url = PropertiesUtil.toString(properties.get(PROP_URL), "");
 
-        LOG.info("Registering Client: {}", name);
+        LOG.info("Registering Client: name={}, url={}", name, url);
 
         restAdapter = new RestAdapter.Builder()
                 .setLogLevel(RestAdapter.LogLevel.FULL)

@@ -72,11 +72,10 @@ public class RefreshSfOptionSetImpl implements RefreshSfOptionSet {
 
     @Modified
     protected final void modified(final Map<String, String> properties) throws Exception {
-        LOG.error("Registering Client: {} ... propertes = {}", "a", "b");
         name = PropertiesUtil.toString(properties.get(PROP_NAME), "");
         myMap = PropertiesUtil.toMap(properties.get(PROP_OPTIONS), new String[]{});
 
-        LOG.error("Registering Client: {} ... propertes = {}", name, myMap.toString());
+        LOG.info("Registering Option Set: name={}, options={}", name, myMap);
     }
 
     @Override
